@@ -34,6 +34,24 @@
             <artifactId>postgresql</artifactId>
             <version>42.7.2</version>
         </dependency>
+        <dependency>
+            <groupId>io.fintrospect</groupId>
+            <artifactId>fintrospect-gson_2.12</artifactId>
+            <version>16.0.0</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>javax.persistence</groupId>
+            <artifactId>javax.persistence-api</artifactId>
+            <version>2.2</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.38</version>
+            <type>jar</type>
+        </dependency>
     </dependencies>
     
     <build>

@@ -1,0 +1,116 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : 2 de set. de 2025, 17:43:08
+    Author     : Duda
+*/
+body{
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fff;
+    font-size: 1.5vw;
+}
+
+header{
+    width: 100%;
+    margin: 0rem 0rem;
+    background: lightblue;
+    padding: 0.8rem 0rem;
+}
+
+h1{
+    font-family: Arial;
+    font-size: 2rem;
+}
+
+header h1{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+article{
+    position: relative;
+    display: flex;
+    padding: 2rem;
+    margin: 0 auto;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 2vw;
+
+}
+
+article div{
+    border: 1px black solid ;
+    border-radius: 4px;
+}
+
+.cadastro{
+    width: 90vw;
+    padding: 0.5rem 1rem;
+    margin-bottom: 2rem;
+}
+
+.cadastro input{
+    width: 90vw;
+    height: 4vh;
+    margin-bottom: 0.5rem;
+}
+
+.cadastro h3{
+    margin: 0.3rem;
+}
+button{
+    border: none;
+    box-sizing: border-box;
+    background: #ffffff;
+}
+
+.save{
+    color: green;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    border: 0.1rem green solid;
+    box-sizing: border-box;
+}
+
+
+.save:hover{
+    color: white;
+    background: green;
+    border: 0.1rem solid green;
+    transition: 0.4s;
+}
+
+
+.lista{
+    width: 90vw;
+    padding: 0.5rem 1rem;
+}
+
+.lista table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;            
+    padding: 0;
+}
+
+.edit{
+    color: orange;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    border: 0.1rem orange solid;
+    box-sizing: border-box;
+    
+}
+
+.del{
+    color: red;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    border: 0.1rem red solid;
+    box-sizing: border-box;
+}

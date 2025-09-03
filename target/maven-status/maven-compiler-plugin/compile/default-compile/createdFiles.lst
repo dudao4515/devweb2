@@ -1,5 +1,4 @@
 com\mycompany\devweb2\JakartaRestConfiguration.class
 model\Ator.class
 controller\AtorServlet.class
-model\AtorDAO.class
 com\mycompany\devweb2\resources\JakartaEE10Resource.class
