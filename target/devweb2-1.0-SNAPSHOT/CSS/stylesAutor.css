@@ -1,205 +1,115 @@
-/*
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
-*/
-/* 
-    Created on : 2 de set. de 2025, 17:43:08
-    Author     : Duda
-*/
-body{
-    padding: 0px;
-    margin: 0px;
+body {
+    margin: 0;
+    padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     background: #fff;
     font-size: 1.5vw;
 }
 
-header{
+header {
     width: 100%;
-    margin: 0rem 0rem;
     background: lightblue;
-    padding: 0.8rem 0rem;
+    padding: 1rem 0;
+    text-align: center;
 }
 
-h1{
-    font-family: Arial;
+header h1 {
+    margin: 0;
     font-size: 2rem;
 }
 
-header h1{
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
-
-article{
-    position: relative;
+article {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 2rem;
-    margin: 0 auto;
-    justify-content: center;
-    flex-wrap: wrap;
-    font-size: 2vw;
-
+    font-size: 1rem;
 }
 
-article div{
-    border: 1px black solid ;
-    border-radius: 4px;
-}
-
-.cadastro{
+.cadastro, .atores-list {
     width: 90vw;
-    padding: 0.5rem 1rem;
+    max-width: 800px;
+    padding: 1rem;
     margin-bottom: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #f8f8f8;
+    box-sizing: border-box;
 }
 
-.cadastro input{
-    width: 90vw;
-    height: 4vh;
+.cadastro input, .cadastro button, .ator-actions a {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    box-sizing: border-box;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.cadastro input {
+    width: 100%;
     margin-bottom: 0.5rem;
 }
 
-.cadastro h3{
-    margin: 0.3rem;
-}
-button{
-    border: none;
-    box-sizing: border-box;
-    background: #ffffff;
-}
-
-.save{
-    color: green;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    border: 0.1rem green solid;
-    box-sizing: border-box;
-}
-
-
-.save:hover{
+.cadastro button {
+    background-color: #4CAF50;
     color: white;
-    background: green;
-    border: 0.1rem solid green;
-    transition: 0.4s;
+    border-color: #4CAF50;
 }
 
-
-.lista{
-    width: 90vw;
-    padding: 0.5rem 1rem;
+.cadastro button:hover {
+    opacity: 0.85;
 }
 
-.lista table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 0;            
-    padding: 0;
-}
-
-.edit{
-    color: orange;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    border: 0.1rem orange solid;
-    box-sizing: border-box;
-    
-}
-
-.del{
-    color: red;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    border: 0.1rem red solid;
-    box-sizing: border-box;
-}
-
-/* Container da lista */
-.atores-list {
-    width: 90vw;
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 15px;
-    background-color: #fefefe;
-    border: 1px solid #ccc;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-/* Título */
 .atores-list h2 {
+    text-align: center;
+    margin-bottom: 1rem;
     font-size: 1.5rem;
     color: #333;
-    margin-bottom: 20px;
-    text-align: center;
 }
 
-/* Cada ator como card */
 .ator-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 15px;
-    margin-bottom: 12px;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.5rem;
     background-color: #fff;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    transition: all 0.3s ease;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
-.ator-item:hover {
-    background-color: #f0f4ff;
-    border-color: #aaa;
-}
-
-/* Nome e ID */
 .ator-nome {
     font-weight: bold;
-    font-size: 1rem;
-    color: #222;
 }
 
-.ator-id {
-    font-size: 0.85rem;
-    color: #666;
-    margin-left: 10px;
-}
-
-/* Botões */
 .ator-actions a {
-    text-decoration: none;
-    padding: 5px 10px;
-    margin-left: 5px;
+    margin-left: 0.5rem;
     border-radius: 4px;
-    font-size: 0.85rem;
-    transition: 0.3s;
+    border: 1px solid #ccc;
+    padding: 0.3rem 0.7rem;
+    color: white;
+    background-color: #888;
 }
 
 .ator-actions .edit {
-    color: orange;
-    border: 1px solid orange;
-}
-
-.ator-actions .edit:hover {
-    background-color: orange;
-    color: white;
+    background-color: #4CAF50;
+    border-color: #4CAF50;
 }
 
 .ator-actions .del {
-    color: red;
-    border: 1px solid red;
+    background-color: #f44336;
+    border-color: #f44336;
 }
 
-.ator-actions .del:hover {
-    background-color: red;
-    color: white;
+.ator-actions a:hover {
+    opacity: 0.85;
 }
 
-/* Mensagem de lista vazia */
 .empty-list {
     text-align: center;
-    padding: 20px;
     font-style: italic;
     color: #777;
+    padding: 1rem;
 }
