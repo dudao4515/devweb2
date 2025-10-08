@@ -36,5 +36,9 @@ public class Ator {
     public Ator(String nome) {
         this.nome = nome;
     }
-      
+
+    @Override
+    public String toString() {
+        return nome;
+    }    
 }

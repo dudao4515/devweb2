@@ -13,31 +13,53 @@
     </properties>
     
     <dependencies>
-        <!-- API Jakarta EE (Servlet, JSP, etc.) -->
+        <!-- Jakarta Servlet API -->
         <dependency>
-            <groupId>jakarta.platform</groupId>
-            <artifactId>jakarta.jakartaee-api</artifactId>
-            <version>${jakartaee}</version>
+            <groupId>jakarta.servlet</groupId>
+            <artifactId>jakarta.servlet-api</artifactId>
+            <version>6.0.0</version>
             <scope>provided</scope>
+        </dependency>
+
+        <!-- Jakarta REST (JAX-RS) -->
+        <dependency>
+            <groupId>jakarta.ws.rs</groupId>
+            <artifactId>jakarta.ws.rs-api</artifactId>
+            <version>3.1.0</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- Jakarta Persistence (JPA) -->
+        <dependency>
+            <groupId>jakarta.persistence</groupId>
+            <artifactId>jakarta.persistence-api</artifactId>
+            <version>3.1.0</version>
         </dependency>
 
         <!-- Hibernate ORM -->
         <dependency>
-            <groupId>org.hibernate.orm</groupId>
+            <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
-            <version>6.4.4.Final</version>
+            <version>5.6.15.Final</version>
+            <type>jar</type>
+        </dependency>
+        <!-- Bean Validation (RESOLVE O ERRO) -->
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>2.0.1.Final</version>
         </dependency>
 
         <!-- PostgreSQL JDBC Driver -->
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
-            <version>42.7.2</version>
+            <version>42.6.0</version>
         </dependency>
         <dependency>
             <groupId>io.fintrospect</groupId>
             <artifactId>fintrospect-gson_2.12</artifactId>
-            <version>16.0.0</version>
+            <version>14.20.0</version>
             <type>jar</type>
         </dependency>
         <dependency>
@@ -51,6 +73,12 @@
             <artifactId>lombok</artifactId>
             <version>1.18.38</version>
             <type>jar</type>
+        </dependency>
+        <!-- Jackson para evitar conflitos -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.17.2</version>
         </dependency>
     </dependencies>
     

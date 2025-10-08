@@ -6,50 +6,50 @@ package servlet;
 
 import java.io.IOException;
 import dao.AtorDAO;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import java.util.Date;
+import java.util.Enumeration;
+import java.util.List;
+import model.Ator;
 
 /**
  *
  * @author Duda
  */
-public class AtorServlet extends  jakarta.servlet.http.HttpServlet{
-	private static final long serialVersionUID = 1L;
+@WebServlet(name = "AtorServlet", urlPatterns = {"/AtorServlet"})
+public class AtorServlet extends jakarta.servlet.http.HttpServlet {
 
-    /**
-     * Default constructor. 
-     */
-    public AtorServlet() {
-        // TODO Auto-generated constructor stub
+    //INSERIR
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
+        String nome = request.getParameter("txt_nome");
+        if (nome != null || !nome.trim().isEmpty()) {
+            Ator ator = new Ator(nome);
+            AtorDAO atorDao = new AtorDAO();
+
+            atorDao.inserirAtor(ator);
+            System.out.println("Ator" + ator + "Cadastrado com sucesso.");
+
+        }
+
+        response.sendRedirect(request.getContextPath() + "/AtorServlet");
     }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(jakarta.servlet.http.HttpServletRequest request, jakarta.servlet.http.HttpServletResponse response) throws jakarta.servlet.ServletException, IOException {
-		
-		 
-		String nome = request.getParameter("txt_nome");
-		
-		System.out.println("wwwwwwwwwwwwwwwww");
-		
-		if (AtorDAO.incluirAtor(nome) == 0) {
-			
-			response.sendRedirect("mensagem.jsp?msg='Ator incluído com sucesso!!!'");
-			
-		}else {
-			
-			response.sendRedirect("mensagem.jsp?msg='ERRO ao incluir Ator.'");
-			
-		}
-		
-				
-	}
+    //LISTAR
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(jakarta.servlet.http.HttpServletRequest request, jakarta.servlet.http.HttpServletResponse response) throws jakarta.servlet.ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
-	}
+        System.out.println("Listando atores");
+        AtorDAO atorDAO = new AtorDAO();
+        List<Ator> atores = atorDAO.listarAtores();
+        System.out.println("NOmeS???????????  \n" + atores.toString());
+
+        request.setAttribute("atores", atores);
+        request.getRequestDispatcher("/crudAtor.jsp").forward(request, response);
+    }
 
 }

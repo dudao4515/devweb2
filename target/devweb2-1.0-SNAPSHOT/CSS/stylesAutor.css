@@ -114,3 +114,92 @@ button{
     border: 0.1rem red solid;
     box-sizing: border-box;
 }
+
+/* Container da lista */
+.atores-list {
+    width: 90vw;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 15px;
+    background-color: #fefefe;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Título */
+.atores-list h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Cada ator como card */
+.ator-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    margin-bottom: 12px;
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+}
+
+.ator-item:hover {
+    background-color: #f0f4ff;
+    border-color: #aaa;
+}
+
+/* Nome e ID */
+.ator-nome {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #222;
+}
+
+.ator-id {
+    font-size: 0.85rem;
+    color: #666;
+    margin-left: 10px;
+}
+
+/* Botões */
+.ator-actions a {
+    text-decoration: none;
+    padding: 5px 10px;
+    margin-left: 5px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    transition: 0.3s;
+}
+
+.ator-actions .edit {
+    color: orange;
+    border: 1px solid orange;
+}
+
+.ator-actions .edit:hover {
+    background-color: orange;
+    color: white;
+}
+
+.ator-actions .del {
+    color: red;
+    border: 1px solid red;
+}
+
+.ator-actions .del:hover {
+    background-color: red;
+    color: white;
+}
+
+/* Mensagem de lista vazia */
+.empty-list {
+    text-align: center;
+    padding: 20px;
+    font-style: italic;
+    color: #777;
+}

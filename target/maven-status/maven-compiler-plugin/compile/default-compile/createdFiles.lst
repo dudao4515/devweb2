@@ -1,4 +1,8 @@
 com\mycompany\devweb2\JakartaRestConfiguration.class
+util\HibernateUtil.class
+util\PersistenceUtil.class
+dao\TesteConexao.class
 model\Ator.class
-controller\AtorServlet.class
 com\mycompany\devweb2\resources\JakartaEE10Resource.class
+dao\AtorDAO.class
+servlet\AtorServlet.class
